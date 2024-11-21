@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decrypt File</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #C9F0FF; /* Custom background color */
+        }
+        .btn-custom {
+            background-color: #9F87AF; /* Custom button color */
+            color: #070707; /* Button text color */
+        }
+        .btn-custom:hover {
+            background-color: #88527F; /* Hover color */
+            color: #070707; /* Text color on hover */
+        }
+        .heading {
+            color: #070707; /* Heading color */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="heading text-center mb-4">Decrypt File</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="filename">Filename (without .enc extension):</label>
+                <input type="text" class="form-control" id="filename" name="filename" placeholder="Enter encrypted file name" required>
+            </div>
+            <div class="form-group">
+                <label for="key">Private Key (Base64 encoded):</label>
+                <textarea class="form-control" id="key" name="key" rows="5" placeholder="Enter your Base64 encoded private key" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="folder_path">Folder Path (where the encrypted file is stored):</label>
+                <input type="text" class="form-control" id="folder_path" name="folder_path" placeholder="Enter folder path" required>
+            </div>
+            <button type="submit" class="btn btn-custom btn-block">Decrypt</button>
+        </form>
+        {% if error %}
+        <div class="alert alert-danger mt-3" role="alert">
+            {{ error }}
+        </div>
+        {% endif %}
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

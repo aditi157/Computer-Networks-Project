@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - File Encryption App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #C9F0FF; /* Custom background color */
+        }
+        .btn-custom {
+            background-color: #9F87AF; /* Custom button color */
+            color: #070707; /* Button text color */
+        }
+        .btn-custom:hover {
+            background-color: #88527F; /* Hover color */
+            color: #070707; /* Ensure text remains white on hover */
+        }
+	.heading[
+		color:#070707;
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">File Encryption App</h1>
+        <div class="mt-4">
+            <a href="{{ url_for('register') }}" class="btn btn-custom">Register</a>
+            <a href="{{ url_for('login') }}" class="btn btn-custom ml-2">Login</a>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FTP Server - File Encryption App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #C9F0FF; /* Custom background color */
+        }
+        .btn-custom {
+            background-color: #9F87AF; /* Custom button color */
+            color: #070707; /* Button text color */
+        }
+        .btn-custom:hover {
+            background-color: #88527F; /* Hover color */
+            color: #070707; /* Text color on hover */
+        }
+        .heading {
+            color: #070707; /* Heading color */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading mt-5">Access FTP Server/Decrypt File</h1>
+        <p class="mt-4">To continue to the FTP server, click <a href="{{ ftp_server_url }}" target="_main" class="btn btn-custom">here</a>.</p>
+        <p class="mt-2">To decrypt a file, click <a href="{{ url_for('decrypt_file') }}" target="_main" class="btn btn-custom">here</a>.</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
